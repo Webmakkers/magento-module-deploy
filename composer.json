@@ -1,0 +1,27 @@
+{
+    "name": "webmakkers/magento-module-deploy",
+    "description": "Excludes unused themes from the static content deploy",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.4.0||~8.1.0||~8.2.0",
+        "magento/framework": "102.0.*",
+        "magento/module-deploy": "103.0.*",
+        "magento/module-theme": "103.0.*"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webmakkers\\Deploy\\": ""
+        }
+    },
+    "version": "1.0.0"
+}
