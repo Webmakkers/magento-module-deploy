@@ -1,5 +1,10 @@
 # Deploy
 
+## Install
+`composer require webmakkers/magento-module-deploy`
+
+[screenshot](https://github.com/Webmakkers/magento-module-deploy/blob/master/screenshot.png)
+
 ## Features
 - Excludes unused themes from the static content deploy.
 
