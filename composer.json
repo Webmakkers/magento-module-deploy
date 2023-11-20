@@ -6,9 +6,9 @@
     },
     "require": {
         "php": "~7.4.0||~8.1.0||~8.2.0",
-        "magento/framework": "102.0.*",
-        "magento/module-deploy": "103.0.*",
-        "magento/module-theme": "103.0.*"
+        "magento/framework": "102.0.*||103.0.*",
+        "magento/module-deploy": "100.4.*",
+        "magento/module-theme": "101.1.*"
     },
     "type": "magento2-module",
     "license": [
@@ -23,5 +23,5 @@
             "Webmakkers\\Deploy\\": ""
         }
     },
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
