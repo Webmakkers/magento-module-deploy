@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace Webmakkers\Deploy\module\Plugin;
+namespace Webmakkers\Deploy\Plugin;
 
 use Magento\Deploy\Process\Queue;
 use Magento\Deploy\Package\Package;
-use Webmakkers\Deploy\module\Api\ActiveThemesResolverInterface;
+use Webmakkers\Deploy\Api\ActiveThemesResolverInterface;
 
 class ExcludeInactiveThemesFromQueue
 {

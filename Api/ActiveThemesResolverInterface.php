@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Webmakkers\Deploy\module\Api;
+namespace Webmakkers\Deploy\Api;
 
 interface ActiveThemesResolverInterface
 {

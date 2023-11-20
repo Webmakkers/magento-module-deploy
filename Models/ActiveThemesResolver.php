@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Webmakkers\Deploy\module\Models;
+namespace Webmakkers\Deploy\Models;
 
 use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Api\Data\StoreInterface;
@@ -15,7 +15,8 @@ use Magento\Framework\View\DesignInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
-use Webmakkers\Deploy\module\Api\ActiveThemesResolverInterface;
+use Webmakkers\Deploy\Api\ActiveThemesResolverInterface;
+
 use function in_array;
 use function is_numeric;
 
