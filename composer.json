@@ -5,15 +5,14 @@
         "sort-packages": true
     },
     "require": {
-        "php": "~7.4.0||~8.1.0||~8.2.0",
-        "magento/framework": "102.0.*||103.0.*",
+        "php": "~8.1.0||~8.2.0||~8.3.0",
+        "magento/framework": "103.0.*",
         "magento/module-deploy": "100.4.*",
         "magento/module-theme": "101.1.*"
     },
     "type": "magento2-module",
     "license": [
-        "OSL-3.0",
-        "AFL-3.0"
+        "GPL-3.0"
     ],
     "autoload": {
         "files": [
@@ -23,5 +22,5 @@
             "Webmakkers\\Deploy\\": ""
         }
     },
-    "version": "1.0.1"
+    "version": "1.0.2"
 }

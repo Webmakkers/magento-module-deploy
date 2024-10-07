@@ -13,14 +13,11 @@ use Magento\Deploy\Process\Queue;
 use Magento\Deploy\Package\Package;
 use Webmakkers\Deploy\Api\ActiveThemesResolverInterface;
 
-class ExcludeInactiveThemesFromQueue
+readonly class ExcludeInactiveThemesFromQueue
 {
-    private ActiveThemesResolverInterface $activeThemesResolver;
-
     public function __construct(
-        ActiveThemesResolverInterface $activeThemesResolver
+        private ActiveThemesResolverInterface $activeThemesResolver
     ) {
-        $this->activeThemesResolver = $activeThemesResolver;
     }
 
     public function aroundAdd(

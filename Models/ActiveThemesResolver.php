@@ -17,27 +17,16 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Webmakkers\Deploy\Api\ActiveThemesResolverInterface;
 
-use function in_array;
-use function is_numeric;
-
 class ActiveThemesResolver implements ActiveThemesResolverInterface
 {
-    private DesignInterface $design;
-    private ScopeConfigInterface $scopeConfig;
-    private StoreRepositoryInterface $storeRepository;
-    private ThemeProviderInterface $themeProvider;
     private $usedThemes;
 
     public function __construct(
-        DesignInterface $design,
-        ScopeConfigInterface $scopeConfig,
-        StoreRepositoryInterface $storeRepository,
-        ThemeProviderInterface $themeProvider
+        private readonly DesignInterface $design,
+        private readonly ScopeConfigInterface $scopeConfig,
+        private readonly StoreRepositoryInterface $storeRepository,
+        private readonly ThemeProviderInterface $themeProvider
     ) {
-        $this->design = $design;
-        $this->scopeConfig = $scopeConfig;
-        $this->storeRepository = $storeRepository;
-        $this->themeProvider = $themeProvider;
     }
 
     public function execute(): array
@@ -93,14 +82,14 @@ class ActiveThemesResolver implements ActiveThemesResolverInterface
             (int)$store->getId()
         );
 
-        if (!is_numeric($themeId)) {
+        if (!\is_numeric($themeId)) {
             return;
         }
 
         $theme = $this->themeProvider->getThemeById((int)$themeId);
         if (
             empty($theme->getCode())
-            || in_array($theme->getCode(), $this->usedThemes)
+            || \in_array($theme->getCode(), $this->usedThemes)
         ) {
             return;
         }
